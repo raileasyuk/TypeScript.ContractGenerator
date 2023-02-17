@@ -6,7 +6,7 @@ namespace SkbKontur.TypeScript.ContractGenerator.Internals
     {
         public override string GenerateCode(ICodeGenerationContext context)
         {
-            return $"import {{ {TypeName} }} from '{context.GetReferenceFromUnitToAnother(CurrentUnit.Path, PathToUnit)}';";
+            return $"import type {{ {TypeName} }} from '{context.GetReferenceFromUnitToAnother(CurrentUnit.Path, PathToUnit)}';";
         }
 
         public string TypeName { get; set; }
