@@ -10,7 +10,7 @@ namespace SkbKontur.TypeScript.ContractGenerator.CodeDom
         {
             var argument = Argument.Type.GenerateCode(context);
             if (argument != "string" && argument != "number")
-                return $"[key in {Argument.Type.GenerateCode(context)}]{(Optional ? "?" : "")}: {ResultType.GenerateCode(context)};";
+                return $"[key in {Argument.Type.GenerateCode(context)}]: {ResultType.GenerateCode(context)};";
             return $"[{Argument.GenerateCode(context)}]: {ResultType.GenerateCode(context)};";
         }
     }

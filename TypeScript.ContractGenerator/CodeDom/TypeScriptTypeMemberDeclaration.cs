@@ -8,7 +8,7 @@ namespace SkbKontur.TypeScript.ContractGenerator.CodeDom
 
         public override string GenerateCode(ICodeGenerationContext context)
         {
-            return Name + (Optional ? "?" : "") + ": " + Type.GenerateCode(context) + ";";
+            return Name + ": " + Type.GenerateCode(context) + ";";
         }
     }
 }
